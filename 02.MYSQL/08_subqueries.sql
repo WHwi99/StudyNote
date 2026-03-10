@@ -1,3 +1,4 @@
+-- Active: 1773026731142@@127.0.0.1@3306@menudb
 -- 08.subqueries
 -- 다른 sql문 내부에 포함되어 실행되는 쿼리를 말하며
 -- where절 : 조건비교, from절 : 파생테이블
@@ -11,11 +12,11 @@ FROM
     tbl_menu
 WHERE
     category_code = (SELECT
-                    category_code
-                FROM
-                    tbl_menu
-                WHERE
-                    menu_name = "민트미역국");
+                        category_code
+                    FROM
+                        tbl_menu
+                    WHERE
+                        menu_name = "민트미역국");
 
 -- in 연산자 활용
 -- 서브쿼리 결과가 1row가 아니라 여러 행인 경우에 활용
